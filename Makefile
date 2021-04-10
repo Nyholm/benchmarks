@@ -3,7 +3,8 @@ deploy: setup
 	sam package \
         --template-file template.yaml \
         --output-template-file .stack.yaml \
-        --s3-bucket bref-benchmarks
+        --s3-bucket bref-benchmarks \
+        --region us-east-2
 	sam deploy \
         --template-file .stack.yaml \
         --stack-name bref-benchmarks \
