@@ -3,7 +3,7 @@ deploy: setup
 	sam package \
         --template-file template.yaml \
         --output-template-file .stack.yaml \
-        --s3-bucket bref-benchmarks \
+        --s3-bucket bref-benchmarks-nyholm \
         --region us-east-2
 	sam deploy \
         --template-file .stack.yaml \
@@ -27,9 +27,13 @@ bench-phpbench:
 setup:
 	cd php-function && composer install --no-dev --classmap-authoritative
 	cd http-application && composer install --no-dev --classmap-authoritative
+	cd runtime-http && composer install --no-dev --classmap-authoritative
 	cd php-bench && composer install --no-dev --classmap-authoritative
 	cd symfony && composer install --no-dev --classmap-authoritative --no-scripts
 	rm -rf symfony/var/cache/*
 	cd symfony && php bin/console cache:clear --no-debug --env=prod
+	cd symfony-runtime && composer install --no-dev --classmap-authoritative --no-scripts
+	rm -rf symfony-runtime/var/cache/*
+	cd symfony-runtime && php bin/console cache:clear --no-debug --env=prod
 
 .PHONY: setup

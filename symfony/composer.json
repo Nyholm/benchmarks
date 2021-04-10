@@ -11,6 +11,9 @@
     "symfony/yaml": "*"
   },
   "config": {
+    "platform": {
+      "php": "7.4.16"
+    },
     "preferred-install": {
       "*": "dist"
     },

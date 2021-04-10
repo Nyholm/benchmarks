@@ -28,13 +28,25 @@ done
 wait # Wait for all invocations to finish
 
 # HTTP application
-ab -c 20 -n 20 https://v82j8g4a5k.execute-api.us-east-2.amazonaws.com/Prod/128
-ab -c 20 -n 20 https://v82j8g4a5k.execute-api.us-east-2.amazonaws.com/Prod/512
-ab -c 20 -n 20 https://v82j8g4a5k.execute-api.us-east-2.amazonaws.com/Prod/1024
-ab -c 20 -n 20 https://v82j8g4a5k.execute-api.us-east-2.amazonaws.com/Prod/2048
+ab -c 20 -n 20 https://sg45xxu0p2.execute-api.us-east-2.amazonaws.com/Prod/128
+ab -c 20 -n 20 https://sg45xxu0p2.execute-api.us-east-2.amazonaws.com/Prod/512
+ab -c 20 -n 20 https://sg45xxu0p2.execute-api.us-east-2.amazonaws.com/Prod/1024
+ab -c 20 -n 20 https://sg45xxu0p2.execute-api.us-east-2.amazonaws.com/Prod/2048
 
 # Symfony
-ab -c 20 -n 20 https://v82j8g4a5k.execute-api.us-east-2.amazonaws.com/Prod/symfony/128
-ab -c 20 -n 20 https://v82j8g4a5k.execute-api.us-east-2.amazonaws.com/Prod/symfony/512
-ab -c 20 -n 20 https://v82j8g4a5k.execute-api.us-east-2.amazonaws.com/Prod/symfony/1024
-ab -c 20 -n 20 https://v82j8g4a5k.execute-api.us-east-2.amazonaws.com/Prod/symfony/2048
+ab -c 20 -n 20 https://sg45xxu0p2.execute-api.us-east-2.amazonaws.com/Prod/symfony/128
+ab -c 20 -n 20 https://sg45xxu0p2.execute-api.us-east-2.amazonaws.com/Prod/symfony/512
+ab -c 20 -n 20 https://sg45xxu0p2.execute-api.us-east-2.amazonaws.com/Prod/symfony/1024
+ab -c 20 -n 20 https://sg45xxu0p2.execute-api.us-east-2.amazonaws.com/Prod/symfony/2048
+
+# Symfony runtime
+ab -c 20 -n 20 https://sg45xxu0p2.execute-api.us-east-2.amazonaws.com/Prod/symfony-runtime/128
+ab -c 20 -n 20 https://sg45xxu0p2.execute-api.us-east-2.amazonaws.com/Prod/symfony-runtime/512
+ab -c 20 -n 20 https://sg45xxu0p2.execute-api.us-east-2.amazonaws.com/Prod/symfony-runtime/1024
+ab -c 20 -n 20 https://sg45xxu0p2.execute-api.us-east-2.amazonaws.com/Prod/symfony-runtime/2048
+
+# Http runtime
+ab -c 20 -n 20 https://sg45xxu0p2.execute-api.us-east-2.amazonaws.com/Prod/http-runtime/128
+ab -c 20 -n 20 https://sg45xxu0p2.execute-api.us-east-2.amazonaws.com/Prod/http-runtime/512
+ab -c 20 -n 20 https://sg45xxu0p2.execute-api.us-east-2.amazonaws.com/Prod/http-runtime/1024
+ab -c 20 -n 20 https://sg45xxu0p2.execute-api.us-east-2.amazonaws.com/Prod/http-runtime/2048
